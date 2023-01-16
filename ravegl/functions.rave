@@ -1,0 +1,44 @@
+namespace rgl {
+    // Old functions
+    extern(linkname: "glVertex2d") void Vertex2d(double one, double two);
+    extern(linkname: "glVertex2f") void Vertex2f(float one, float two);
+    extern(linkname: "glVertex2i") void Vertex2i(int one, int two);
+    extern(linkname: "glVertex2s") void Vertex2s(short one, short two);
+
+    extern(linkname: "glVertex3d") void Vertex3d(double one, double two, double three);
+    extern(linkname: "glVertex3f") void Vertex3f(float one, float two, float three);
+    extern(linkname: "glVertex3i") void Vertex3i(int one, int two, int three);
+    extern(linkname: "glVertex3s") void Vertex3s(short one, short two, short three);
+
+    extern(linkname: "glVertexAttribPointer") void VertexAttribPointer(uint index, int size, int type, bool normalized, int stride, void* ptr);
+    extern(linkname: "glGenBuffers") void GenBuffers(int n, uint* buffers);
+    extern(linkname: "glGenerateMipmap") void GenMipMap(int target);
+    extern(linkname: "glGenerateTextureMipmap") void GenTextureMipMap(uint texture);
+
+    extern(linkname: "glDeleteBuffers") void DeleteBuffers(int n, uint* buffers);
+    extern(linkname: "glBindBuffer") void BindBuffer(int target, uint buffer);
+
+    extern(linkname: "glDrawArrays") void DrawArrays(int mode, int first, int n);
+    extern(linkname: "glDrawElements") void DrawElements(int mode, int n, int type, void* indices);
+
+    extern(linkname: "glCreateShader") uint CreateShader(int type);
+    extern(linkname: "glCreateProgram") uint CreateProgram();
+    extern(linkname: "glDeleteProgram") void DeleteProgram(uint p);
+    extern(linkname: "glDeleteShader") void DeleteShader(uint s);
+
+    extern(linkname: "glGetAttribLocation") int GetAttribLoc(uint program, const(char)* name);
+    extern(linkname: "glGetShaderiv") void GetShaderiv(uint s, int pn, int* params);
+    extern(linkname: "glGetShaderInfoLog") void GetShaderInfoLog(uint s, int bufferSize, int* len, char* buffer);
+
+    extern(linkname: "glDisableVertexAttribArray") void DisableVertexAttribArray(uint index);
+    extern(linkname: "glEnableVertexAttribArray") void EnableVertexAttribArray(uint index);
+
+    extern(linkname: "glBufferData") void BufferData(int target, int size, void* data, int usage);
+    extern(linkname: "glBindTexture") void BindTexture(int target, uint tex);
+    extern(linkname: "glBufferSubData") void BufferSubData(int target, int offset, int size, void* data);
+    extern(linkname: "glClearColor") void ClearColor(float r, float g, float b, float a);
+    extern(linkname: "glCompileShader") void CompileShader(uint s);
+
+    extern(linkname: "glLinkProgram") void LinkProgram(uint pr);
+    extern(linkname: "glAttachShader") void AttachShader(uint pr, uint s);
+}
