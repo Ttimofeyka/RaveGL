@@ -41,4 +41,10 @@ namespace rgl {
 
     extern(linkname: "glLinkProgram") void LinkProgram(uint pr);
     extern(linkname: "glAttachShader") void AttachShader(uint pr, uint s);
+    extern(linkname: "glShaderSource") void ShaderSource(uint s, int n, char** str, int* len);
+    extern(linkname: "glUseProgram") void UseProgram(uint pr);
+
+    extern(linkname: "glGenVertexArrays") void GenVertexArrays(int n, uint* arrays);
+    extern(linkname: "glBindVertexArray") void BindVertexArray(uint arr);
+    extern(linkname: "glDeleteVertexArrays") void DeleteVertexArrays(int n, uint* arr);
 }

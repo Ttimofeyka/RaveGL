@@ -19,7 +19,7 @@ namespace rgl {
     alias Quads = 0x0007;
     alias QuadStrip = 0x0008;
     alias Polygon = 0x0009;
-    
+
     alias VertexArray = 0x8074;
     alias NormalArray = 0x8075;
     alias ColorArray = 0x8076;
@@ -29,7 +29,7 @@ namespace rgl {
     alias VertexArraySize = 0x807A;
     alias VertexArrayType = 0x807B;
     alias VertexArrayStride = 0x807C;
-    
+
     alias MatrixMode = 0x0BA0;
     alias ModelView = 0x1700;
     alias Projection = 0x1701;
@@ -58,7 +58,7 @@ namespace rgl {
 
     alias Compile = 0x1300;
     alias CompileAndExecute = 0x1301;
-    
+
     alias Never = 0x0200;
     alias Less = 0x0201;
     alias Equal = 0x0202;
@@ -139,4 +139,8 @@ namespace rgl {
 
     alias MajorVersion = 0x821B;
     alias MinorVersion = 0xB21C;
+
+    alias StreamDraw = 0x88E0;
+    alias StaticDraw = 0x88E4;
+    alias DynamicDraw = 0x88E8;
 }
