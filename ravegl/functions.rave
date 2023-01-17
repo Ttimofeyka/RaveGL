@@ -47,4 +47,23 @@ namespace rgl {
     extern(linkname: "glGenVertexArrays") void GenVertexArrays(int n, uint* arrays);
     extern(linkname: "glBindVertexArray") void BindVertexArray(uint arr);
     extern(linkname: "glDeleteVertexArrays") void DeleteVertexArrays(int n, uint* arr);
+
+    extern(linkname: "glTexParameteri") void TexParameterInt(int target, int pn, int param);
+    extern(linkname: "glTexImage2D") void TexImage2D(int target, int l, int internalf, int w, int h, int b, int form, int t, void* pix);
+
+    extern(linkname: "glUniform1f") void Uniform1Float(int loc, float v);
+    extern(linkname: "glUniform1i") void Uniform1Int(int loc, int v);
+    extern(linkname: "glUniform2f") void Uniform2Float(int loc, float v);
+    extern(linkname: "glUniform2i") void Uniform2Int(int loc, int v);
+    extern(linkname: "glUniform3f") void Uniform3Float(int loc, float v);
+    extern(linkname: "glUniform3i") void Uniform3Int(int loc, int v);
+    extern(linkname: "glUniform4f") void Uniform4Float(int loc, float v);
+    extern(linkname: "glUniform4i") void Uniform4Int(int loc, int v);
+    extern(linkname: "glUniformMatrix2fv") void UniformMatrix2fv(int l, int n, bool transp, float* vals);
+    extern(linkname: "glUniformMatrix3fv") void UniformMatrix3fv(int l, int n, bool transp, float* vals);
+
+    extern(linkname: "glVertexAttrib1f") void VertexAttrib1(int index, float v);
+    extern(linkname: "glVertexAttrib2f") void VertexAttrib2(int index, float v, float v2);
+    extern(linkname: "glVertexAttrib3f") void VertexAttrib3(int index, float v, float v2, float v3);
+    extern(linkname: "glVertexAttrib4f") void VertexAttrib4(int index, float v, float v2, float v3, float v4);
 }

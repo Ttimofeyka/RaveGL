@@ -125,6 +125,11 @@ namespace rgl {
     alias ObjectLinear = 0x2401;
     alias Renderer = 0x1F01;
 
+    alias TextureBorderColor = 0x1004;
+    alias ClampToBorder = 0x812D;
+    alias Nearest = 0x2600;
+    alias Linear = 0x2601;
+
     alias ArrayBuffer = 0x8892;
     alias Buffer = 0x82E0;
     alias ElementArrayBuffer = 0x8893;
@@ -143,4 +148,18 @@ namespace rgl {
     alias StreamDraw = 0x88E0;
     alias StaticDraw = 0x88E4;
     alias DynamicDraw = 0x88E8;
+
+    alias Texture0 = 0x84C0;
+    alias Texture1 = 0x84C1;
+    alias Texture2 = 0x84C2;
+    alias Texture3 = 0x84C3;
+    alias Texture4 = 0x84C4;
+    alias Texture5 = 0x84C5;
+    alias Texture6 = 0x84C6;
+    alias Texture7 = 0x84C7;
+    alias Texture8 = 0x84C8;
+    alias Texture9 = 0x84C9;
+    alias Texture10 = 0x84CA;
+    alias Texture11 = 0x84CB;
+    alias Texture12 = 0x84CC;
 }
