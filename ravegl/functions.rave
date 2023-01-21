@@ -73,4 +73,5 @@ namespace rgl {
     extern(linkname: "glGetProgramInfoLog") void GetProgramInfoLog(uint id, int c, int* l, char* buffer);
 
     extern(linkname: "glGenTextures") void GenTextures(int n, uint* where);
+    extern(linkname: "glActiveTexture") void ActiveTexture(int n);
 }
