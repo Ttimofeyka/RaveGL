@@ -37,6 +37,7 @@ namespace rgl {
     extern(linkname: "glBindTexture") void BindTexture(int target, uint tex);
     extern(linkname: "glBufferSubData") void BufferSubData(int target, int offset, int size, void* data);
     extern(linkname: "glClearColor") void ClearColor(float r, float g, float b, float a);
+    extern(linkname: "glClear") void Clear(int t);
     extern(linkname: "glCompileShader") void CompileShader(uint s);
 
     extern(linkname: "glLinkProgram") void LinkProgram(uint pr);
@@ -66,4 +67,6 @@ namespace rgl {
     extern(linkname: "glVertexAttrib2f") void VertexAttrib2(int index, float v, float v2);
     extern(linkname: "glVertexAttrib3f") void VertexAttrib3(int index, float v, float v2, float v3);
     extern(linkname: "glVertexAttrib4f") void VertexAttrib4(int index, float v, float v2, float v3, float v4);
+
+    extern(linkname: "glViewport") void ViewPort(int w, int h, int x, int y);
 }
