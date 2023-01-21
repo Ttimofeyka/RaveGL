@@ -59,6 +59,8 @@ namespace rgl {
     alias Compile = 0x1300;
     alias CompileAndExecute = 0x1301;
 
+    alias CompileStatus = 0x8B81;
+
     alias Never = 0x0200;
     alias Less = 0x0201;
     alias Equal = 0x0202;
