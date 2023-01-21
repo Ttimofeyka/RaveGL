@@ -127,6 +127,8 @@ namespace rgl {
     alias ObjectLinear = 0x2401;
     alias Renderer = 0x1F01;
 
+    alias Repeat = 0x2901;
+
     alias TextureBorderColor = 0x1004;
     alias ClampToBorder = 0x812D;
     alias Nearest = 0x2600;
