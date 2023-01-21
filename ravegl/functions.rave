@@ -71,4 +71,6 @@ namespace rgl {
     extern(linkname: "glViewport") void ViewPort(int w, int h, int x, int y);
     extern(linkname: "glGetProgramiv") void GetProgramiv(uint id, int t, int* s);
     extern(linkname: "glGetProgramInfoLog") void GetProgramInfoLog(uint id, int c, int* l, char* buffer);
+
+    extern(linkname: "glGenTextures") void GenTextures(int n, uint* where);
 }
