@@ -62,6 +62,7 @@ namespace rgl {
     extern(linkname: "glUniform4i") void Uniform4Int(int loc, int v);
     extern(linkname: "glUniformMatrix2fv") void UniformMatrix2fv(int l, int n, bool transp, float* vals);
     extern(linkname: "glUniformMatrix3fv") void UniformMatrix3fv(int l, int n, bool transp, float* vals);
+    extern(linkname: "glUniformMatrix4fv") void UniformMatrix4fv(int l, int n, bool transp, float* vals);
 
     extern(linkname: "glVertexAttrib1f") void VertexAttrib1(int index, float v);
     extern(linkname: "glVertexAttrib2f") void VertexAttrib2(int index, float v, float v2);
