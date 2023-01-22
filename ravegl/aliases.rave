@@ -140,6 +140,7 @@ namespace rgl {
 
     alias ColorBufferBit = 0x00004000;
     alias DepthBufferBit = 0x00000100;
+    alias StencilBufferBit = 0x00000400;
 
     alias FragmentShader = 0x8B30;
     alias VertexShader = 0x8B31;
