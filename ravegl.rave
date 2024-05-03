@@ -1,3 +1,176 @@
+// Aliases
+namespace rgl {
+    alias Byte = 0x1400;
+    alias UByte = 0x1401;
+    alias Short = 0x1402;
+    alias UShort = 0x1403;
+    alias Int = 0x1404;
+    alias UInt = 0x1405;
+    alias Float = 0x1406;
+    alias Double = 0x140A;
+    alias Byte = 0x1400;
+
+    alias Points = 0x0000;
+    alias Lines = 0x0001;
+    alias LineLoop = 0x0002;
+    alias LineStrip = 0x0003;
+    alias Triangles = 0x0004;
+    alias TriangleStrip = 0x0005;
+    alias TriangleFun = 0x0006;
+    alias Quads = 0x0007;
+    alias QuadStrip = 0x0008;
+    alias Polygon = 0x0009;
+
+    alias VertexArray = 0x8074;
+    alias NormalArray = 0x8075;
+    alias ColorArray = 0x8076;
+    alias IndexArray = 0x8077;
+    alias TextureCoordArray = 0x8078;
+    alias EdgeFlagArray = 0x8079;
+    alias VertexArraySize = 0x807A;
+    alias VertexArrayType = 0x807B;
+    alias VertexArrayStride = 0x807C;
+
+    alias MatrixMode = 0x0BA0;
+    alias ModelView = 0x1700;
+    alias Projection = 0x1701;
+    alias Texture = 0x1702;
+
+    alias PointSmooth = 0x0B10;
+    alias PointSize = 0x0B11;
+    alias PointSizeGranularity = 0x0B13;
+    alias PointSizeRange = 0x0B12;
+
+    alias LineSmooth = 0x0B20;
+    alias LineStripple = 0x0B24;
+    alias LineWidth = 0x0B21;
+
+    alias Point = 0x1B00;
+    alias Line = 0x1B01;
+    alias Fill = 0x1B02;
+    alias CW = 0x0900;
+    alias CCW = 0x0901;
+    alias Front = 0x0404;
+    alias Back = 0x0405;
+    alias PolygonMode = 0x0B40;
+    alias PolygonSmooth = 0x0B41;
+    alias PolygonStipple = 0x0B42;
+    alias EdgeFlag = 0x0B43;
+
+    alias Compile = 0x1300;
+    alias CompileAndExecute = 0x1301;
+
+    alias CompileStatus = 0x8B81;
+
+    alias Never = 0x0200;
+    alias Less = 0x0201;
+    alias Equal = 0x0202;
+    alias Lequal = 0x0203;
+    alias Greater = 0x0204;
+    alias Nequal = 0x0205;
+    alias Gequal = 0x0206;
+    alias Always = 0x0207;
+
+    alias Position = 0x1203;
+    alias Smooth = 0x1D01;
+    alias Flat = 0x1D00;
+    alias Normalize = 0x0BA1;
+
+    alias Blend = 0x0BE2;
+    alias Zero = 0;
+    alias One = 1;
+
+    alias Render = 0x1C00;
+    alias Select = 0x1C02;
+
+    alias Mode2D = 0x0600;
+    alias Mode3D = 0x0601;
+
+    alias SelectionBufferPointer = 0x0DF3;
+    alias SelectionBufferSize = 0x0DF4;
+
+    alias Fog = 0x0B60;
+    alias FogMode = 0x0B65;
+
+    alias StencilBits = 0x0D57;
+    alias StencilClearValue = 0x0B91;
+    alias StencilIndex = 0x1901;
+
+    alias None = 0;
+    alias Left = 0x0406;
+    alias Right = 0x0407;
+    alias Depth = 0x1801;
+    alias Stencil = 0x1802;
+    alias RGB = 0x1907;
+    alias RGBA = 0x1908;
+
+    alias ViewPort = 0x0BA2;
+    alias RenderMode = 0x0C40;
+    alias RGBAMode = 0x0C31;
+
+    alias Fastest = 0x1101;
+    alias Nicest = 0x1102;
+
+    alias Texture2D = 0x0DE1;
+    alias TextureWrapS = 0x2802;
+    alias TextureWrapT = 0x2803;
+    alias TextureMagFilter = 0x2800;
+    alias TextureMinFilter = 0x2801;
+    alias TextureEnvColor = 0x2201;
+    alias TextureWidth = 0x1000;
+    alias TextureHeight = 0x1001;
+    alias TextureBorder = 0x1002;
+    alias TextureComponents = 0x1003;
+    alias NearestMipMapNearest = 0x2700;
+    alias NearestMipMapLinear = 0x2702;
+    alias LinearMipMapNearest = 0x2701;
+    alias LinearMipMapLinear = 0x2703;
+    alias ObjectLinear = 0x2401;
+    alias Renderer = 0x1F01;
+
+    alias Repeat = 0x2901;
+
+    alias TextureBorderColor = 0x1004;
+    alias ClampToBorder = 0x812D;
+    alias Nearest = 0x2600;
+    alias Linear = 0x2601;
+
+    alias ArrayBuffer = 0x8892;
+    alias Buffer = 0x82E0;
+    alias ElementArrayBuffer = 0x8893;
+
+    alias ColorBufferBit = 0x00004000;
+    alias DepthBufferBit = 0x00000100;
+    alias StencilBufferBit = 0x00000400;
+
+    alias FragmentShader = 0x8B30;
+    alias VertexShader = 0x8B31;
+    alias ShaderType = 0x8B4F;
+    alias LinkStatus = 0x8B82;
+
+    alias MajorVersion = 0x821B;
+    alias MinorVersion = 0xB21C;
+
+    alias StreamDraw = 0x88E0;
+    alias StaticDraw = 0x88E4;
+    alias DynamicDraw = 0x88E8;
+
+    alias Texture0 = 0x84C0;
+    alias Texture1 = 0x84C1;
+    alias Texture2 = 0x84C2;
+    alias Texture3 = 0x84C3;
+    alias Texture4 = 0x84C4;
+    alias Texture5 = 0x84C5;
+    alias Texture6 = 0x84C6;
+    alias Texture7 = 0x84C7;
+    alias Texture8 = 0x84C8;
+    alias Texture9 = 0x84C9;
+    alias Texture10 = 0x84CA;
+    alias Texture11 = 0x84CB;
+    alias Texture12 = 0x84CC;
+}
+
+// Functions
 namespace rgl {
     // Old functions
     extern(linkname: "glVertex2d") void Vertex2d(double one, double two);
