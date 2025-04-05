@@ -1,5 +1,5 @@
 // Aliases
-namespace rgl {
+namespace gl {
     alias Byte = 0x1400;
     alias UByte = 0x1401;
     alias Short = 0x1402;
@@ -171,8 +171,7 @@ namespace rgl {
 }
 
 // Functions
-namespace rgl {
-    // Old functions
+namespace gl {
     extern(linkname: "glVertex2d") void Vertex2d(double one, double two);
     extern(linkname: "glVertex2f") void Vertex2f(float one, float two);
     extern(linkname: "glVertex2i") void Vertex2i(int one, int two);
