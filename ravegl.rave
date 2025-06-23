@@ -16,6 +16,45 @@ namespace gl {
     alias Double = 0x140A;
     alias Byte = 0x1400;
 
+    alias FrameBuffer = 0x8D40;
+    alias RenderBuffer = 0x8D41;
+
+    alias colorAttachment0 = 0x8CE0;
+    alias colorAttachment1 = 0x8CE1;
+    alias colorAttachment2 = 0x8CE2;
+    alias colorAttachment3 = 0x8CE3;
+    alias colorAttachment4 = 0x8CE4;
+    alias colorAttachment5 = 0x8CE5;
+    alias colorAttachment6 = 0x8CE6;
+    alias colorAttachment7 = 0x8CE7;
+    alias colorAttachment8 = 0x8CE8;
+    alias colorAttachment9 = 0x8CE9;
+    alias colorAttachment10 = 0x8CEA;
+    alias colorAttachment11 = 0x8CEB;
+    alias colorAttachment12 = 0x8CEC;
+    alias colorAttachment13 = 0x8CED;
+    alias colorAttachment14 = 0x8CEE;
+    alias colorAttachment15 = 0x8CEF;
+    alias colorAttachment16 = 0x8CF0;
+    alias colorAttachment17 = 0x8CF1;
+    alias colorAttachment18 = 0x8CF2;
+    alias colorAttachment19 = 0x8CF3;
+    alias colorAttachment20 = 0x8CF4;
+    alias colorAttachment21 = 0x8CF5;
+    alias colorAttachment22 = 0x8CF6;
+    alias colorAttachment23 = 0x8CF7;
+    alias colorAttachment24 = 0x8CF8;
+    alias colorAttachment25 = 0x8CF9;
+    alias colorAttachment26 = 0x8CFA;
+    alias colorAttachment27 = 0x8CFB;
+    alias colorAttachment28 = 0x8CFC;
+    alias colorAttachment29 = 0x8CFD;
+    alias colorAttachment30 = 0x8CFE;
+    alias colorAttachment31 = 0x8CFF;
+
+    alias depthAttachment = 0x8D00;
+    alias stencilAttachment = 0x8D20;
+
     alias Points = 0x0000;
     alias Lines = 0x0001;
     alias LineLoop = 0x0002;
@@ -107,8 +146,13 @@ namespace gl {
     alias Right = 0x0407;
     alias Depth = 0x1801;
     alias Stencil = 0x1802;
+
     alias RGB = 0x1907;
     alias RGBA = 0x1908;
+    alias RGBA32F = 0x8814;
+    alias RGB32F = 0x8815;
+    alias RGBA16F = 0x881A;
+    alias RGB16F = 0x881B;
 
     alias ViewPort = 0x0BA2;
     alias RenderMode = 0x0C40;
@@ -189,9 +233,11 @@ namespace gl {
     extern(linkname: "glVertex3s") void Vertex3s(short one, short two, short three);
 
     extern(linkname: "glVertexAttribPointer") void VertexAttribPointer(uint index, int size, int type, bool normalized, int stride, void* ptr);
+
     extern(linkname: "glGenBuffers") void GenBuffers(int n, uint* buffers);
     extern(linkname: "glGenerateMipmap") void GenMipMap(int target);
     extern(linkname: "glGenerateTextureMipmap") void GenTextureMipMap(uint texture);
+    extern(linkname: "glGenFramebuffers") void glGenFramebuffers(int n, uint* framebuffers);
 
     extern(linkname: "glDeleteBuffers") void DeleteBuffers(int n, uint* buffers);
     extern(linkname: "glBindBuffer") void BindBuffer(int target, uint buffer);
@@ -253,4 +299,7 @@ namespace gl {
 
     extern(linkname: "glGenTextures") void GenTextures(int n, uint* where);
     extern(linkname: "glActiveTexture") void ActiveTexture(int n);
+
+    extern(linkname: "glBindFramebuffer") void glBindFramebuffer(uint target, uint framebuffer);
+    extern(linkname: "glFramebufferTexture2D") void glFramebufferTexture2D(uint target, uint attachment, uint textarget, uint texture, int level);
 }
